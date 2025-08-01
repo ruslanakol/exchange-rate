@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Exchange Page</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<script scr="script.js"></script>
+<h1> Currency Converter </h1>
+<div class="main-container">
+<div class="main-selections">
+    <div class="amount-div">
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" name="amount" value="amount" checked>
+    </div>
+    <div class="from-div">
+        <label for="from">From</label>
+        <select id="from" name="from">
+            <option selected>Select</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+        </select>
+    </div>
+    <div class="to-div">
+        <label for="to">To</label>
+        <select id="to" name="to">
+            <option selected>Select</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+        </select>
+    </div>
+</div>
+    <button class="btn">Exchange</button>
+    <div class="result">
+        <p id="result"></p>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
