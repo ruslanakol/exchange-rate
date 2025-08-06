@@ -12,6 +12,7 @@ document.getElementById('btn').addEventListener('click', async() => {
     }
 
     try {
+        if (from === 'USD') {
         const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
         const response = await fetch(url);
         const data = await response.json();
@@ -20,6 +21,38 @@ document.getElementById('btn').addEventListener('click', async() => {
         const converted = amount * rate;
 
         document.getElementById('result').textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+    }
+        if (from === 'GBP') {
+            const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/GBP`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const rate = data.conversion_rates[to];
+            const converted = amount * rate;
+
+            document.getElementById('result').textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+        }
+        if (from === 'EUR') {
+            const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/EUR`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const rate = data.conversion_rates[to];
+            const converted = amount * rate;
+
+            document.getElementById('result').textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+        }
+        if (from === 'UAH') {
+            const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/UAH`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const rate = data.conversion_rates[to];
+            const converted = amount * rate;
+
+            document.getElementById('result').textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+
+        }
     }
     catch (error) {
         document.getElementById('result').textContent = error.message;
