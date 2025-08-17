@@ -11,7 +11,7 @@ document.getElementById('btn').addEventListener('click', async() => {
         return;
     }
 
-    try {
+     try {
         if (from === 'USD') {
         const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
         const response = await fetch(url);
